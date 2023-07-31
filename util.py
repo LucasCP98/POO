@@ -1,8 +1,26 @@
-# Nesse caso que eu fiz não precisaria usar o decoretor getter e setter, se fosse uma função que exclusivamente
-# precisasse de um número iria da erro, ai sim poderiamos implementar o getter e setter, caso vinhesse um str
-# fariamos uma verificação para convertar dentro do setter.
-import time
+# class Cliente:
+#     def __init__(self, nome: str):
+#         self._nome = nome
+#
+#     @property
+#     def nome(self):
+#         return self._nome
+#
+#
+# if __name__ == "__main__":
+#     var = Cliente("Carlos")
+#     coisa = var.nome
+#     print(coisa)
+#
+class Cliente:
+    def __init__(self, numero_1: int, numero_2: int):
+        self.numero_1: int = numero_1
+        self.numero_2: int = numero_2
 
-print(1)
-time.sleep(10)
-print(2)
+    def soma(self):
+        return self.numero_1 + self.numero_2
+
+
+if __name__ == "__main__":
+    var = Cliente(1, 1)
+    print(var.soma())

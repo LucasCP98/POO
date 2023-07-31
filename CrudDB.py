@@ -20,22 +20,10 @@ clientes = CadastroClientes(cpf, nome, sexo, data_nascimento)
 clientes.cadastro()
 
 
-# CRUD
+# CRUD create
 print("Inserindo dados no banco...")
-comando_sql = f'''
-    INSERT INTO clientes (
-    cpf,
-    nome,
-    sexo,
-    data_nascimento) VALUES (
-    {clientes.banco_de_dados['cpf']}, 
-    "{clientes.banco_de_dados['nome']}",
-    "{clientes.banco_de_dados['sexo']}",
-    "{clientes.banco_de_dados['data_nascimento']}");
-'''
+comando_sql = f'INSERT INTO clientes (cpf, nome, sexo, data_nascimento) VALUES ("{clientes.banco_de_dados["cpf"]}", "{clientes.banco_de_dados["nome"]}", "{clientes.banco_de_dados["sexo"]}", "{clientes.banco_de_dados["data_nascimento"]}")'
 cursor.execute(comando_sql)
 conexao.commit()
 cursor.close()
 conexao.close()
-
-

@@ -23,13 +23,3 @@ class CadastroClientes:
             dados = int(dados)
 
         self._cpf = dados
-
-
-# if __name__ == "__main__":
-#     run = CadastroClientes("05427269126", "Lucas Costa Pereira", "M", "12/02/1998")
-#     run.cadastro()
-#     print(run.banco_de_dados)
-#     print(run.banco_de_dados['cpf'])
-#     print(run.banco_de_dados['nome'])
-#     print(run.banco_de_dados['sexo'])
-#     print(run.banco_de_dados['data_nascimento'])
